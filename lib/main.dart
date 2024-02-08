@@ -21,3 +21,141 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
+class MyApp extends StatelessWidget {
+  final List<String> _pages = ['Home', 'Search', 'Favorites', 'Profile'];
+  final List<Widget> _tabViews = [
+    Center(child: Text('Home Page')),
+    Center(child: Text('Search Page')),
+    Center(child: Text('Favorites Page')),
+    Center(child: Text('Profile Page')),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: DefaultTabController(
+        length: _pages.length,
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text('My UIB Project'),
+            bottom: TabBar(
+              tabs: _pages.map((page) => Tab(text: page)).toList(),
+            ),
+          ),
+          body: TabBarView(
+            children: _tabViews,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(''),
+        ),
+        body: Center(
+          child: Stack(
+            alignment: Alignment.topLeft,
+            children: [
+              Container(
+                width: 100,
+                height: 100,
+                color: Colors.blue,
+              ),
+              Align(
+                alignment: Alignment.topLeft,
+                child: Container(
+                  width: 80,
+                  height: 80,
+                  color: Colors.green,
+                ),
+              ),
+              Align(
+                alignment: Alignment.topLeft,
+                child: Container(
+                  width: 60,
+                  height: 60,
+                  color: Colors.red,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Search Bar Example'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            showSearch(context: context, delegate: CustomSearchDelegate());
+          },
+          child: Text('Open Search'),
+        ),
+      ),
+    );
+  }
+}
+
+class CustomSearchDelegate extends SearchDelegate<String> {
+  @override
+  List<Widget> buildActions(BuildContext context) {
+    return [
+      IconButton(
+        icon: Icon(Icons.clear),
+        onPressed: () {
+          query = '';
+        },
+      ),
+    ];
+  }
+
+  @override
+  Widget buildLeading(BuildContext context) {
+    return IconButton(
+      icon: Icon(Icons.arrow_back),
+      onPressed: () {
+        close(context, '');
+      },
+    );
+  }
+
+  @override
+  Widget buildResults(BuildContext context) {
+    return Center(
+      child: Text('Search Results for: $query'),
+    );
+  }
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    return Center(
+      child: Text('Suggestions for: $query'),
+    );
+  }
+}
