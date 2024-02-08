@@ -66,24 +66,35 @@ class MyApp extends StatelessWidget {
             alignment: Alignment.topLeft,
             children: [
               Container(
-                width: 90,
-                height: 80,
-                color: Colors.yellow,
+                width: 100,
+                height: 100,
+                color: Colors.blue,
               ),
               Align(
                 alignment: Alignment.topLeft,
                 child: Container(
+                  margin: EdgeInsets.only(top: 20, left: 20),
                   width: 80,
                   height: 80,
-                  color: Colors.green,
+                  color: Color.fromARGB(255, 23, 70, 90),
+                ),
+              ),  
+              Align(
+                alignment: Alignment.topLeft,
+                child: Container(
+                  margin: EdgeInsets.only(top: 40, left: 40),
+                  width: 60,
+                  height: 60,
+                  color: Color.fromARGB(255, 3, 188, 255),
                 ),
               ),
               Align(
                 alignment: Alignment.topLeft,
                 child: Container(
-                  width: 60,
-                  height: 60,
-                  color: Colors.red,
+                  margin: EdgeInsets.only(top: 60, left: 60),
+                  width: 40,
+                  height: 40,
+                  color: Color.fromARGB(255, 13, 237, 237),
                 ),
               ),
             ],
@@ -94,14 +105,19 @@ class MyApp extends StatelessWidget {
   }
 }
 
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: MyHomePage(),
+      theme: ThemeData(
+        scaffoldBackgroundColor: Color.fromARGB(236, 0, 222, 204), 
+      ),
     );
   }
 }
+
 
 class MyHomePage extends StatelessWidget {
   @override
@@ -159,3 +175,4 @@ class CustomSearchDelegate extends SearchDelegate<String> {
     );
   }
 }
+
