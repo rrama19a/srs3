@@ -24,12 +24,12 @@ class MyApp extends StatelessWidget {
 
 
 class MyApp extends StatelessWidget {
-  final List<String> _pages = ['Home', 'Search', 'Favorites', 'Profile'];
+  final List<String> _pages = ['Ram', 'Zan', 'Kay', 'Ratov'];
   final List<Widget> _tabViews = [
-    Center(child: Text('Home Page')),
-    Center(child: Text('Search Page')),
-    Center(child: Text('Favorites Page')),
-    Center(child: Text('Profile Page')),
+    Center(child: Text('Ram Page')),
+    Center(child: Text('ZAN Page')),
+    Center(child: Text('Kay Page')),
+    Center(child: Text('Ratov Page')),
   ];
 
   @override
@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
         length: _pages.length,
         child: Scaffold(
           appBar: AppBar(
-            title: Text('My UIB Project'),
+            title: Text('RAMAZAN'),
             bottom: TabBar(
               tabs: _pages.map((page) => Tab(text: page)).toList(),
             ),
@@ -66,9 +66,9 @@ class MyApp extends StatelessWidget {
             alignment: Alignment.topLeft,
             children: [
               Container(
-                width: 100,
-                height: 100,
-                color: Colors.blue,
+                width: 90,
+                height: 80,
+                color: Colors.yellow,
               ),
               Align(
                 alignment: Alignment.topLeft,
@@ -108,7 +108,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Search Bar Example'),
+        title: Text('FIND'),
       ),
       body: Center(
         child: ElevatedButton(
