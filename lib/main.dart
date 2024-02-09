@@ -11,15 +11,15 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: const Color.fromARGB(255, 0, 0, 0),
         body: Center(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Expanded(
-                child: Text(
-                  'Здравствуйте, это Кайратулы Рамазан!',
-                  textAlign: TextAlign.left,
-                  style: TextStyle(fontSize: 24.0, color: Colors.white),
-                ),
+              SizedBox(height: 16), // Расстояние между строками
+              Text(
+                'Hello Flutter',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 24.0, color: Colors.white),
               ),
             ],
           ),
