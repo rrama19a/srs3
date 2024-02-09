@@ -138,6 +138,19 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
+
+
+
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MyHomePage(),
+    );
+  }
+}
+
 class CustomSearchDelegate extends SearchDelegate<String> {
   @override
   List<Widget> buildActions(BuildContext context) {
