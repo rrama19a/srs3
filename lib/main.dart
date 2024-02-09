@@ -1,3 +1,8 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   final List<String> _pages = ['Ram', 'Zan', 'Kay', 'Ratov'];
