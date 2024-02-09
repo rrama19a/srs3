@@ -12,14 +12,31 @@ class MyApp extends StatelessWidget {
         backgroundColor: const Color.fromARGB(255, 0, 0, 0),
         body: Center(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: 16), // Расстояние между строками
               Text(
-                'Hello Flutter',
+                'amore',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 24.0, color: Colors.white),
+                style: TextStyle(fontSize: 24.0, height: 1.0, color: Colors.white),
+              ),
+              SizedBox(height: 8), // Уменьшенный интервал между строками
+              Text(
+                'amore',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 24.0, height: 1.0, color: Colors.white),
+              ),
+              SizedBox(height: 8), // Уменьшенный интервал между строками
+              Text(
+                'amore',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 24.0, height: 1.0, color: Colors.white),
+              ),
+              SizedBox(height: 8), // Уменьшенный интервал между строками
+              Text(
+                'amore',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 24.0, height: 1.0, color: Colors.white),
               ),
             ],
           ),
